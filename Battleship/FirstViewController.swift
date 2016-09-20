@@ -119,7 +119,7 @@ class FirstViewController: UIViewController {
   
   func buttonTapped(_ sender: UIButton) {
     if battleEngine.checkShip(sender.tag - 1) {
-      WelcomeTitle.text = "IT'S A HIT! GOOD JOB MAGGOT!"
+      WelcomeTitle.text = "IT'S A HIT! GOOD JOB FAGGOT!"
       sender.backgroundColor = UIColor(red: 0.7098, green: 0, blue: 0, alpha: 1.0)
       sender.isEnabled = false
       destroyedCount += 1

@@ -10,13 +10,13 @@ import Foundation
 
 class BattleShipEngine {
   
-  enum State {
+  private enum State {
     case Hittable
     case NotHittable
   }
   
-  var grid = [State]()
-  let numGrid: Int
+  private var grid = [State]()
+  private let numGrid: Int
   
   init(numGrid:Int){
     self.numGrid = numGrid
@@ -29,8 +29,8 @@ class BattleShipEngine {
    * makeShip = math for random ship plot
    */
   
-  let shipTypes = [2, 3, 3, 4, 5]
-  var checkOverlap = [Int]()
+  private let shipTypes = [2, 3, 3, 4, 5]
+  private var checkOverlap = [Int]()
   
   func setupShips() {
     grid = Array(repeating: .NotHittable, count: numGrid)
@@ -40,7 +40,7 @@ class BattleShipEngine {
     }
   }
   
-  func makeShip(i: Int) {
+  private func makeShip(i: Int) {
     var holdSpots = [Int]()
     var tempFirst = Int(arc4random() % UInt32(numGrid))
     holdSpots.append(tempFirst)
