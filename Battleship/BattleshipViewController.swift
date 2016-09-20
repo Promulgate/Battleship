@@ -16,7 +16,7 @@ class BattleshipViewController: UIViewController {
     let brain: BattleshipBrain
     
     required init?(coder aDecoder: NSCoder) {
-        self.brain = BattleshipBrain(rows: 5, columns: 5)
+        self.brain = BattleshipBrain(rows: 10, columns: 10)
         super.init(coder: aDecoder)
     }
     
@@ -55,7 +55,7 @@ class BattleshipViewController: UIViewController {
                 // find the button by tag
                 // our tag is one-based so we add 1
                 if let button = gridView.viewWithTag(r * brain.columns + c + 1) as? UIButton {
-                    
+                  
                     // funky subscript call with two indexes ([r][c] doesn't seem to work)
                     switch brain[r, c] {
                     case .empty(let state):

@@ -10,6 +10,7 @@
 import Foundation
 
 class BattleshipBrain {
+  
     enum Coordinate {
         enum Ship {
             case carrier(Int)
