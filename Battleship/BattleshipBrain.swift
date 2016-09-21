@@ -37,6 +37,7 @@ class BattleshipBrain {
         return false
       }
     }
+    
   }
   
   let rows: Int
